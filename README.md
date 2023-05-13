@@ -1,2 +1,2 @@
-# responsive-langing-page
+# responsive-landing-page
 responsive langing page
