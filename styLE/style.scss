@@ -1,0 +1,329 @@
+@use './assets/reset';
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+         main{
+        height: 100vh;
+        background-color: rgb(93, 108, 93);
+        background-image: url('https://images.unsplash.com/photo-1682687981974-c5ef2111640c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+            position: relative;
+        .container{
+        background-color: rgba(227, 228, 229, 0.183);
+        backdrop-filter: blur(7px);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+
+        header{
+            z-index: -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+        color: rgb(45, 45, 87);
+            nav{
+            position: relative;
+
+
+            .icon{
+                position: absolute;
+                top: -15px;
+                right:60px ;
+                font-size: 30px;
+            }
+            }
+
+        ul{
+            text-transform: capitalize;
+            cursor: pointer;    
+        li {
+            width: 100px;
+            list-style-type: none;
+            display: inline-block;
+            margin: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.2s ease;
+            &:hover{
+                background-color:rgb(45, 45, 87);
+                color: beige;
+
+            }
+
+            }
+
+
+        }
+        a{
+            text-decoration: none;
+            text-transform: none;
+            color: rgb(45, 45, 87);
+
+        }
+
+        .logo{
+            font-size: 22px;
+            padding: 10px;
+        }
+
+
+        }
+
+        .hero{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        height: calc(100vh - 100px);
+        width: 100%;
+
+        .landing{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1{
+        text-align: center;
+        padding: 20px;
+        }
+        p{
+        width: 70%;
+                    padding: 20px;
+        text-align:center;
+        }
+      
+        }
+
+        .cta {
+            padding: 20px;
+            button{
+                width: 120px;
+                height: 40px;
+                border-radius: 10px;
+                border: transparent;
+                font-size: 16px;
+                text-transform: capitalize;
+                background: white;
+                
+                    &:hover {
+                        background-color: rgb(45, 45, 87);
+                        color: beige;
+                    }
+            }
+        }
+        }
+
+
+    }
+
+    .drop-down-menu{
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 160px;
+        background-color: rgba(76, 49, 19, 0.606);
+        top: 100px;
+        left: 20%;
+        right: 20%;
+        border-radius: 10px;
+
+       &.active{
+        display: none;
+       }
+
+        ul{
+            li{
+                padding-top: 13px;
+                padding-left: 13px;
+             list-style-type: none;
+             &:hover{
+                color: aliceblue;
+             }
+            }
+        }
+    }
+}
+
+
+
+
+
+// Small devices (landscape phones, 576px and up)
+
+
+@media (max-width: 575px) {
+    main{
+    .container {
+            width:500px;
+            padding-left:0;
+            padding-right: 0;
+    
+            ul {
+                display: none;
+            }
+    
+            .icon {
+                display: block;
+            }
+           .landing {
+                margin-top: 45px;
+    
+               h1 {
+                margin-top: 25px;
+                 
+               }
+    
+               p {
+                        margin-top: 20px;
+               }
+    
+           }
+        }
+    
+        .drop-down-menu {
+            display: flex;
+            right: 0;
+        }
+    }
+
+
+}
+
+
+@media (min-width: 576px) {
+    main{
+        .container {
+                width: 500px;
+        
+                ul {
+                    display: none;
+                }
+        
+                .icon {
+                display: block;
+                }
+
+//               
+
+                }
+           
+        
+            }
+        
+            .drop-down-menu {
+                display: flex;
+            }
+    }
+
+   
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+   main{
+    .container {
+            width: 700px;
+    
+            ul {
+                display: none;
+    
+            }
+    
+            .icon {
+                display: block;
+            }
+                  
+        }
+    
+        .drop-down-menu {
+            display: flex;
+        }
+   }
+               
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+main{
+    .container {
+            width: 960px;
+    
+            ul {
+                display: block;
+    
+                li {
+                    margin-left: 0;
+                    font-size: 14px;
+                }
+            }
+    
+            .icon {
+                display: none;
+            }
+                          .hero {
+                              justify-content: center;
+            
+                          }
+        }
+                   .drop-down-menu {
+                       display: none;
+                   }
+}
+}
+                
+
+// X-Large devices (large desktops, 1200px and up)
+@media  (min-width: 1400px) {
+    main {
+.container {
+        width: 1370px;
+        
+    
+    ul {
+        display: block;
+    }
+
+    .icon {
+        display: none;
+    }
+        
+  .drop-down-menu {
+      display: none;
+  }
+        
+
+}
+
+}
+
+}
+ 
+
+ 
+
+
+
+
+
